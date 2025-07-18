@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce-solution-monorepo",
+  "name": "booking-solution-monorepo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

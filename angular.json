@@ -3,31 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "e-commerce-back-office": {
+    "booking-back-office": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/e-commerce-back-office",
-      "sourceRoot": "projects/e-commerce-back-office/src",
+      "root": "projects/booking-back-office",
+      "sourceRoot": "projects/booking-back-office/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/e-commerce-back-office",
-            "index": "projects/e-commerce-back-office/src/index.html",
-            "browser": "projects/e-commerce-back-office/src/main.ts",
+            "outputPath": "dist/booking-back-office",
+            "index": "projects/booking-back-office/src/index.html",
+            "browser": "projects/booking-back-office/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/e-commerce-back-office/tsconfig.app.json",
+            "tsConfig": "projects/booking-back-office/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/e-commerce-back-office/public"
+                "input": "projects/booking-back-office/public"
               }
             ],
             "styles": [
-              "projects/e-commerce-back-office/src/styles.scss",
+              "projects/booking-back-office/src/styles.scss",
                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
                "./node_modules/bootstrap-icons/font/bootstrap-icons.css",
                "./node_modules/ngx-toastr/toastr.css"
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "e-commerce-back-office:build:production"
+              "buildTarget": "booking-back-office:build:production"
             },
             "development": {
-              "buildTarget": "e-commerce-back-office:build:development"
+              "buildTarget": "booking-back-office:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,46 +83,46 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/e-commerce-back-office/tsconfig.spec.json",
+            "tsConfig": "projects/booking-back-office/tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/e-commerce-back-office/public"
+                "input": "projects/booking-back-office/public"
               }
             ],
             "styles": [
-              "projects/e-commerce-back-office/src/styles.scss"
+              "projects/booking-back-office/src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     },
-    "e-commerce-front-office": {
+    "booking-front-office": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/e-commerce-front-office",
-      "sourceRoot": "projects/e-commerce-front-office/src",
+      "root": "projects/booking-front-office",
+      "sourceRoot": "projects/booking-front-office/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/e-commerce-front-office",
-            "index": "projects/e-commerce-front-office/src/index.html",
-            "browser": "projects/e-commerce-front-office/src/main.ts",
+            "outputPath": "dist/booking-front-office",
+            "index": "projects/booking-front-office/src/index.html",
+            "browser": "projects/booking-front-office/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/e-commerce-front-office/tsconfig.app.json",
+            "tsConfig": "projects/booking-front-office/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/e-commerce-front-office/public"
+                "input": "projects/booking-front-office/public"
               }
             ],
             "styles": [
-              "projects/e-commerce-front-office/src/styles.css"
+              "projects/booking-front-office/src/styles.css"
             ],
             "scripts": []
           },
@@ -154,10 +154,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "e-commerce-front-office:build:production"
+              "buildTarget": "booking-front-office:build:production"
             },
             "development": {
-              "buildTarget": "e-commerce-front-office:build:development"
+              "buildTarget": "booking-front-office:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -172,38 +172,38 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/e-commerce-front-office/tsconfig.spec.json",
+            "tsConfig": "projects/booking-front-office/tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/e-commerce-front-office/public"
+                "input": "projects/booking-front-office/public"
               }
             ],
             "styles": [
-              "projects/e-commerce-front-office/src/styles.css"
+              "projects/booking-front-office/src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     },
-    "e-commerce-library": {
+    "booking-library": {
       "projectType": "library",
-      "root": "projects/e-commerce-library",
-      "sourceRoot": "projects/e-commerce-library/src",
+      "root": "projects/booking-library",
+      "sourceRoot": "projects/booking-library/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/e-commerce-library/ng-package.json"
+            "project": "projects/booking-library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/e-commerce-library/tsconfig.lib.prod.json"
+              "tsConfig": "projects/booking-library/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/e-commerce-library/tsconfig.lib.json"
+              "tsConfig": "projects/booking-library/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -211,7 +211,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/e-commerce-library/tsconfig.spec.json",
+            "tsConfig": "projects/booking-library/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

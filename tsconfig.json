@@ -4,20 +4,20 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "e-commerce-library": [
-        "./dist/e-commerce-library"
+      "booking-library": [
+        "./dist/booking-library"
       ],
 
       "@shared/templates/components/*":[
-        "./projects/e-commerce-back-office/src/app/shared/templates/components/*"
+        "./projects/booking-back-office/src/app/shared/templates/components/*"
       ],
 
       "@shared/templates/models/*":[
-        "./projects/e-commerce-back-office/src/app/shared/templates/models/model/*",
-        "./projects/e-commerce-back-office/src/app/shared/templates/models/dtos/*"
+        "./projects/booking-back-office/src/app/shared/templates/models/model/*",
+        "./projects/booking-back-office/src/app/shared/templates/models/dtos/*"
       ],
       "@shared/templates/services/*":[
-        "./projects/e-commerce-back-office/src/app/shared/templates/services/*"
+        "./projects/booking-back-office/src/app/shared/templates/services/*"
       ]
     },
     "outDir": "./dist/out-tsc",
