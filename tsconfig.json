@@ -1,0 +1,44 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "e-commerce-library": [
+        "./dist/e-commerce-library"
+      ],
+
+      "@shared/templates/components/*":[
+        "./projects/e-commerce-back-office/src/app/shared/templates/components/*"
+      ],
+
+      "@shared/templates/models/*":[
+        "./projects/e-commerce-back-office/src/app/shared/templates/models/model/*",
+        "./projects/e-commerce-back-office/src/app/shared/templates/models/dtos/*"
+      ],
+      "@shared/templates/services/*":[
+        "./projects/e-commerce-back-office/src/app/shared/templates/services/*"
+      ]
+    },
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

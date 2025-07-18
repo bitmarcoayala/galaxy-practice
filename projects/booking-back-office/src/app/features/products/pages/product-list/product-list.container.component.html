@@ -1,0 +1,60 @@
+<div class="row mb-3">
+    <div class="col-sm-4">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title">
+    </div>
+    <div class="col-sm-4">
+        <label for="cboSituacion" class="form-label">Category</label>
+        <select id="cboSituacion" class="form-control form-select">
+            <option value="">Seleccionar</option>
+            <option value="">Activo</option>
+            <option value="">Inactivo</option>
+        </select>
+    </div>
+
+    <div class="col-sm-4 text-end">
+          <button class="btn btn-sm btn-outline-info me-2"(click)="showList(true)" ><i class="bi bi-card-list"></i></button>
+          <button class="btn btn-sm btn-outline-secondary" (click)="showList(false)" ><i class="bi bi-postcard"></i></button>
+    </div>
+
+  </div>
+<div class="row mb-3">
+    <div class="col-sm-12 text-end">
+        <button type="button" class="btn btn-circle btn-form-principal me-2"
+        (click)="search()">
+          <i class="bi bi-search"></i>
+          Search
+        </button>
+        <button type="button" class="btn btn-circle btn-form-secundary"
+          (click)="new()">
+          <i class="bi bi-plus"></i>
+          New
+        </button>
+    </div>
+</div>
+<div class="row mb-3">
+@if (swList) {
+  <app-product-list-presenter [products]="products"></app-product-list-presenter>
+}@else {
+  <div class="row">
+    <div class="col-sm-8" >
+      <div class="container-card">
+        @for (product of products; track product.id){
+          <app-product-card-presenter [product]="product" (productSelect)="productSelect($event)" ></app-product-card-presenter>
+        }
+      </div>
+      </div>
+      <div class="col-sm-4 ml-5 text-end">
+            <div class="main__description">
+              <strong>Products Selecteds. 🚀</strong>
+              <button class="btn btn-sm btn-outline-info me-2"(click)="clearList()" ><i class="bi bi-x-circle"></i></button>
+            </div>
+            <app-product-list-selected-presenter
+                [productsListSelected]="productsListSelected"
+                (productDeletedId)="productDeletedId($event)"
+                />
+      </div>
+
+   </div>
+}
+</div>

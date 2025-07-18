@@ -1,0 +1,39 @@
+###############################################################
+# Archivo: commands.txt
+# Descripción: Este archivo contiene comandos para crear y configurar el proyecto Booking en Angular, instalar dependencias y ejecutar el servidor de desarrollo.
+###############################################################
+# Comando: Crea un nuevo workspace de Angular sin aplicaciones iniciales
+ng new booking-solution --create-application=false
+
+# Comando: Genera la aplicación booking-back-office
+ng g application booking-back-office
+
+# Comando: Genera la aplicación booking-front-office
+ng g application booking-front-office
+
+# Comando: Genera la librería booking-library
+ng g library booking-library
+
+
+# Comando: Instala Bootstrap versión 5.3.3 para estilos
+npm i bootstrap@5.3.3
+
+# Comando: Instala Popper.js para manejo de popups
+npm i @popperjs/core@2.11.8
+
+# Comando: Instala Sass globalmente para procesar archivos SCSS
+npm install -g sass
+
+# Comando: Instala ngx-toastr para notificaciones
+npm install ngx-toastr --save
+# Comando: Instala el paquete de animaciones de Angular
+npm install @angular/animations --save
+# Comando: Instala SweetAlert2 para alertas personalizadas
+npm install sweetalert2
+
+# Comando: Ejecuta el servidor de desarrollo de booking-back-office en el puerto 4201
+ng s booking-back-office --port 4201
+
+
+# Ejemplo de estilo CSS para bordes punteados y color azul
+style="border-style: dotted;border-color: blue;"

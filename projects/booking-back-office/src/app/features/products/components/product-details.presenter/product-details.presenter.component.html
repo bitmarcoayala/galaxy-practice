@@ -1,0 +1,89 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div >
+  <div class="row" >
+    <div class="mb-3">
+        <label for="title" class="form-label">Title<span>*</span></label>
+        <input type="text"
+              class="form-control"
+              formControlName="title"
+              id="title">
+        <div class="invalid-feedback">
+        </div>
+    </div>
+</div>
+  <div class="row" >
+    <div class="col-6" >
+          <label for="slug" class="form-label">Slug<span>*</span></label>
+          <input type="text"
+                class="form-control"
+                id="slug"
+                formControlName="slug"
+                placeholder="Slug">
+          <div class="invalid-feedback">
+          </div>
+    </div>
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="price" class="form-label">Price<span>*</span></label>
+        <input type="text"
+              class="form-control"
+              id="price"
+              formControlName="slug"
+              placeholder="Price">
+        <div class="invalid-feedback">
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="row" >
+    <div class="col-12" >
+          <label for="description" class="form-label">Description<span>*</span></label>
+          <textarea
+                rows="3"
+                class="form-control"
+                id="description"
+                formControlName="description"
+                placeholder="Description">
+          </textarea>
+          <div class="invalid-feedback">
+          </div>
+    </div>
+  </div>
+  <div class="row" >
+     <div class="col-6" >
+  <div class="mb-3">
+      <label for="category" class="form-label">Category<span>*</span></label>
+      <select id="category"
+              formControlName="category"
+              class="form-control form-select">
+          <option value="">Seleccionar</option>
+          <option value="1">Activo</option>
+          <option value="2">Inactivo</option>
+      </select>
+      <div class="invalid-feedback">
+      </div>
+  </div>
+  </div>
+ <div class="col-6" >
+  <div class="mb-3">
+      <label for="situaction" class="form-label">Situaction<span>*</span></label>
+      <select id="situaction"
+              formControlName="situaction"
+              class="form-control form-select">
+          <option value="">Seleccionar</option>
+          <option value="1">Activo</option>
+          <option value="2">Inactivo</option>
+      </select>
+      <div class="invalid-feedback">
+      </div>
+  </div>
+  </div>
+</div>
+  <div class="row mb-3">
+      <div class="col-sm-12 text-end">
+          <button type="button" class="btn btn-outline-secondary me-2"><i class="bi bi-eraser me-2"></i>Limpiar</button>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-save me-2"></i>Guardar</button>
+      </div>
+  </div>
+  </div>
+</form>

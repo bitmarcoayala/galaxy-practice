@@ -1,0 +1,17 @@
+<div class="accordion" id="accordionExample">
+  @for (product of productsListSelected(); track product.id) {
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <i class="bi bi-x" (click)="deleteItem(product)" ></i> {{product.title}}
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>{{product.category}}</strong><samp class="ml-5">  Price : </samp> <code>{{product.price}}</code>
+      </div>
+    </div>
+  </div>
+  }
+</div>

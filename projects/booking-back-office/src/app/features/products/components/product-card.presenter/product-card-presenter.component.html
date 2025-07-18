@@ -1,0 +1,13 @@
+<div>
+@if(product()){
+  <div class="card" style="width: 15rem;">
+    <img id="image" src="{{image}}" class="card-img-top" alt="..." style="height: 140px; width: 140px;">
+    <div class="card-body">
+      <h5 class="card-title">{{product()?.title | uppercase}}</h5>
+      <p class="card-text">{{product()?.price}}</p>
+      <!-- <p class="card-text">{{product()?.description}}</p> -->
+      <button (click)="selectToList()" class="btn btn-primary">Select to List</button>
+    </div>
+  </div>
+}
+</div>
