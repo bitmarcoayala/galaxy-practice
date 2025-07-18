@@ -12,32 +12,20 @@ export class MenuService {
   constructor() { }
 
   private menuSections: MenuItem[] = [
-    { label: 'Home', route: '/dashboard' },
+    { label: 'Inicio', route: '/dashboard' },
     {
-      label: 'Store',
+      label: 'Reservas',
       children: [
-        { label: 'Orders', route: '/ventas/pedidos' },
-        { label: 'Invoices', route: '/ventas/facturacion' },
-        { label: 'Customers', route: '/ventas/clientes' },
-        { label: 'Sales Reports', route: '/ventas/reportes' }
+        { label: 'Alojamiento', route: '/home/warehouse/products' },
+        { label: 'Vuelos', route: '/inventario/categorias' }
       ]
     },
     {
-      label: 'Warehouse',
+      label: 'Configuración',
       children: [
-        { label: 'Products', route: '/home/warehouse/products' },
-        { label: 'Categories', route: '/inventario/categorias' },
-        { label: 'Suppliers', route: '/inventario/proveedores' },
-        { label: 'Stock Settings', route: '/inventario/stock' }
-      ]
-    },
-    {
-      label: 'Configuration',
-      children: [
-        { label: 'Profiles', route: '/configuracion/perfil' },
-        { label: 'Users', route: '/configuracion/seguridad' },
-        { label: 'Payment Methods', route: '/configuracion/metodos-pago' },
-        { label: 'Integrations', route: '/configuracion/integraciones' }
+        { label: 'Perfiles', route: '/configuracion/perfil' },
+        { label: 'Usuarios', route: '/configuracion/seguridad' },
+        { label: 'Integraciones', route: '/configuracion/integraciones' }
       ]
     },
   ];

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="nav">
       <div class="logo">
-        <h1>BookingClone</h1>
+        <h1>Booking</h1>
       </div>
       <nav class="nav-menu">
         <a href="#" class="nav-link">Alojamientos</a>
@@ -24,7 +24,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <h2 class="hero-title">Encuentra tu próxima estadía</h2>
+      <h2 class="hero-title">Encuentra tu próxima estandía</h2>
       <p class="hero-subtitle">Busca ofertas en hoteles, casas y mucho más</p>
       
       <!-- Search Form -->
@@ -76,6 +76,38 @@
   </div>
 </section>
 
+
+<!-- Features Planificador de viajes rápido y sencillo -->
+<section class="features">
+  <div class="container">
+    <h3>Planificador de viajes rápido y sencillo</h3>
+    <p>Elige un estilo y descubre los principales destinos en Ecuador</p><br>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><img src="./public/images/shared/quito.jpg" alt="Quito"></div>
+        <h4>Hoteles</h4>
+        <p>Desde hoteles boutique hasta resorts de lujo</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h4>Apartamentos</h4>
+        <p>Espacios cómodos para estancias más largas</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏡</div>
+        <h4>Casas</h4>
+        <p>Villas y casas para grupos grandes</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✈️</div>
+        <h4>Vuelos</h4>
+        <p>Encuentra los mejores precios en vuelos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Features Section -->
 <section class="features">
   <div class="container">
@@ -105,28 +137,13 @@
   </div>
 </section>
 
-<!-- Popular Destinations -->
-<section class="destinations">
-  <div class="container">
-    <h3>Destinos populares</h3>
-    <div class="destinations-grid">
-      <div class="destination-card" *ngFor="let destination of popularDestinations">
-        <img [src]="destination.image" [alt]="destination.name">
-        <div class="destination-info">
-          <h4>{{ destination.name }}</h4>
-          <p>{{ destination.properties }} propiedades</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h4>BookingClone</h4>
+        <h4>Booking</h4>
         <p>Tu plataforma de reservas de confianza</p>
       </div>
       <div class="footer-section">
