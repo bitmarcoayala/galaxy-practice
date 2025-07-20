@@ -1,0 +1,92 @@
+<form [formGroup]="fiterform"  class="row mb-3">
+    <div class="col-sm-4">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Buscar por título"
+        formControlName="title"
+        >
+    </div>
+    <div class="col-sm-4">
+        <label for="cboSituacion" class="form-label">Category</label>
+        <select id="cboSituacion" class="form-control form-select" formControlName="categoryId">
+          <option [value]="''">Todas las categorías</option>
+          <option [value]="20">Clothes</option>
+          <option [value]="1">Others</option>
+        </select>
+    </div>
+
+    <div class="col-sm-4 text-end">
+          <button class="btn btn-sm btn-outline-info me-2"(click)="showList(true)" ><i class="bi bi-card-list"></i></button>
+          <button class="btn btn-sm btn-outline-secondary" (click)="showList(false)" ><i class="bi bi-postcard"></i></button>
+    </div>
+
+  </form>
+<div class="row mb-3">
+    <div class="col-sm-12 text-end">
+        <button type="button" class="btn btn-circle btn-form-principal me-2"
+        (click)="search()">
+          <i class="bi bi-search"></i>
+          Search
+        </button>
+        <button type="button" class="btn btn-circle btn-form-secundary"
+          (click)="new()">
+          <i class="bi bi-plus"></i>
+          New
+        </button>
+    </div>
+</div>
+<div class="row mb-3">
+  <div class="col-sm-12" >
+  @if (swList) {
+    <app-booking-list-presenter [bookings]="bookings()"></app-booking-list-presenter>
+      <!--Paging -->
+        @if(total > 0){
+        <nav>
+            <ul class="pagination justify-content-center">
+              <li class="page-item"
+                  (click)="goToPage(currentPage() - 1)"
+                  [class.disabled]="currentPage() === 1">
+                <a class="page-link">Anterior</a>
+              </li>
+
+              <li class="page-item disabled">
+                <a class="page-link" href="#">
+                  Página {{ currentPage() }} de {{ totalPages }}
+                </a>
+              </li>
+
+              <li class="page-item"
+                  (click)="goToPage(currentPage() + 1)"
+                  [class.disabled]="currentPage() === totalPages">
+                <a class="page-link">Siguiente</a>
+              </li>
+            </ul>
+        </nav>
+        }
+        <!--Paging -->
+  }@else {
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="container-card">
+          @for (booking of bookings(); track booking.id){
+            <app-booking-card-presenter [booking]="booking" (bookingSelect)="bookingSelect($event)" ></app-booking-card-presenter>
+          }
+        </div>
+      </div>
+      <div class="col-sm-3" style="width: 40px;">
+
+      </div>
+      <div class="col-sm-3" >
+              <div class="main__description">
+                <strong>bookings Selecteds. 🚀</strong>
+                <button class="btn btn-sm btn-outline-info me-2"(click)="clearList()" ><i class="bi bi-x-circle"></i></button>
+              </div>
+              <app-booking-list-selected-presenter
+                  [bookingsListSelected]="bookingsListSelected"
+                  (bookingDeletedId)="bookingDeletedId($event)"
+                  />
+        </div>
+
+    </div>
+  }
+  </div>
+</div>
